@@ -9,3 +9,5 @@ def go(request):
     return HttpResponse("This is my first page")    
 def second(request):
     return HttpResponse("Test 2 page")
+def third(request):
+    return HttpResponse("This page test3")    
