@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO DO LIST</title>
     <link rel="stylesheet" href="./styles/chekbox.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <!-- <link rel="stylesheet" href="./styles/index.css"> --> -->
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'styles/chekbox.css' %}"> -->
 </head>
 <body>
     <section>
