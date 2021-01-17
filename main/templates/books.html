@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOOKS</title>
+    </head>
+<body>
+ {% for book in book_list %}        
+            <div class="book_item">
+                <div class="book_item_header">
+                    <h4>{{ book.title }}</h4>
+                </div>
+                <div class="book_item_footer">
+                    <p>{{ book.price }}</p>
+                </div>    
+            </div>
+            {% endfor %}
+
+
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
