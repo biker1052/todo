@@ -60,10 +60,18 @@ section{
 .todo_item.done img{
     opacity: 0.5;
 }
-.todo_item_marked{
+
+.todo_item.marked{
     background-color: #FFE082;
-    border: 2px solid #fad66a;    
+    color: #FFE082;
 }
+
+
+/* .todo_item.marked{
+    background-color: #FFE082;
+    color: #FFE082;
+    border: 2px solid #fad66a;    
+} */
 .todo_item_header{
     display: flex;
     align-items: center;
