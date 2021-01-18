@@ -10,11 +10,10 @@
  {% for book in book_list %}        
             <div class="book_item">
                 <div class="book_item_header">
-                    <h4>{{ book.title }}</h4>
-                    <h4>{{ book.author }}</h4>
+                    <h4>{{ book.author }}  -  {{ book.title }}   стоимость {{ book.price }} </h4>
+                    <p></p>
                 </div>
                 <div class="book_item_footer">
-                    <p>{{ book.price }}</p>
                 </div>    
             </div>
             {% endfor %}
