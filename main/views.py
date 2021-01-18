@@ -22,4 +22,8 @@ def add_todo(request):
     text= form["todo_text"]
     todo = ToDo(text=text)
     todo.save()
-    return redirect(test)      
+    return redirect(test)  
+def delete_todo(request,id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(test)          
