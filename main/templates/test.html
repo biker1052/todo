@@ -31,7 +31,6 @@
                     marked
                 {% endif %}
             
-            
             ">
                 <div class="todo_item_header">
                     <label class="checkbox_container">
@@ -47,8 +46,7 @@
                         <a href="{% url 'unmark-todo' todo.id %}"><img src="{% static './icons/star_on.png' %}"/></a>
                         {% else %}
                         <a href="{% url 'mark-todo' todo.id %}"><img src="{% static './icons/star_off.png' %}"/></a>
-                        {% endif %}
-                        
+                        {% endif %}                        
                         <a href="{% url 'delete-todo' todo.id %}"><img src="{% static './icons/vedro.png' %}"/> </a>
                     </div>
                 </div>    
