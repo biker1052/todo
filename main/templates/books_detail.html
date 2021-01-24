@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOOKS</title>
+    </head>
+<body>  
+            <div class="book_item">
+                <div class="book_item_header">
+                    <div>
+                        <h1> {{ book_obj.author }}  </h1>
+                        <h4> {{ book_obj.title }}</h4>
+                        <p> {{ book_obj.subtitle }} </p>
+                        <p> {{ book_obj.description }} </p>
+                        <p> {{ book_obj.genre }} </p>
+                        <h2> {{ book_obj.year }} </h2>
+                    </div>
+                    <a href = "javascript:history.back()">Назад</a>
+                    <p></p>
+                </div>
+                <div class="book_item_footer">
+                </div>    
+            </div>
+<script src="./script.js"></script>
+</body>
+</html>

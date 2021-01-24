@@ -7,21 +7,67 @@
         <title>BOOKS</title>
     </head>
 <body>
+    <div class="create_container">
+        <form action="{% url 'add-book' %}" method="POST">
+            {% csrf_token %}
+            <input
+            class="create_input"
+            type="text"
+            placeholder="Заголовок"
+            name="title"
+            />
+            <input
+            class="create_input"
+            type="text"
+            placeholder="Подзаголовок"
+            name="subtitle"
+            />
+            <input
+            class="create_input"
+            type="text"
+            placeholder="Описание"
+            name="description"
+            />
+            <input
+            class="create_input"
+            type="FloatField"
+            placeholder="Цена"
+            name="price"
+            />
+            <input
+            class="create_input"
+            type="text"
+            placeholder="Жанр"
+            name="genre"
+            />
+            <input
+            class="create_input"
+            type="text"
+            placeholder="Автор"
+            name="author"
+            />
+            <input
+            class="create_input"
+            type="DateField"
+            placeholder="Год выхода"
+            name="year"
+            />
+            <button class="create_button">Добавить</button>
+        </form>
+    </div>
+
+
  {% for book in book_list %}        
             <div class="book_item">
                 <div class="book_item_header">
-                    <h4>{{ book.author }}  -  {{ book.title }}   стоимость {{ book.price }} </h4>
+                    <h4>{{ book.author }}  -  {{ book.title }}   стоимость {{ book.price }} <a href="{% url 'open-book' book.id %}"> подробнее...</a></h4>
+                    
                     <p></p>
                 </div>
                 <div class="book_item_footer">
                 </div>    
             </div>
             {% endfor %}
-
-
-
-
-
 <script src="./script.js"></script>
 </body>
 </html>
