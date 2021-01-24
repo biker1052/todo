@@ -29,6 +29,20 @@ section{
     font-weight: bold;
     border-radius: 3px;
     cursor: pointer;
+    
+}
+
+.delete_button{
+    padding: 5px 20px;
+    background-color: #dd241d;
+    border: 1px solid #141414;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    
 }
 .create_button:active{
     border: 1px solid #CE93D8;

@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/chekbox.css' %}"> 
         <title>BOOKS</title>
     </head>
 <body>
@@ -60,7 +62,12 @@
  {% for book in book_list %}        
             <div class="book_item">
                 <div class="book_item_header">
-                    <h4>{{ book.author }}  -  {{ book.title }}   стоимость {{ book.price }} <a href="{% url 'open-book' book.id %}"> подробнее...</a></h4>
+                    <h4>{{ book.author }}  -  {{ book.title }}   стоимость {{ book.price }} <a href="{% url 'open-book' book.id %}"> подробнее...
+                        <form action="{% url 'delete-book' book.id %}">
+                            <button class="delete_button">Удалить</button>
+                        </form>
+                    </a>    
+                    </h4>
                     
                     <p></p>
                 </div>
