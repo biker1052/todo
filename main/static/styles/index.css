@@ -91,6 +91,13 @@ section{
     align-items: center;
     min-height: 35px;
 }
+.todo_item_header h4{
+    font-size: 18px;
+    font-family: sans-serif;
+}
+.todo_item_header h4 a{
+    text-decoration: none;
+}
 .todo_item_footer{
  display: flex;
  Justify-content: space-between;
