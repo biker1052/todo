@@ -59,22 +59,38 @@
     </div>
 
 
- {% for book in book_list %}        
-            <div class="book_item">
-                <div class="book_item_header">
-                    <h4>{{ book.author }}  -  {{ book.title }}   стоимость {{ book.price }} <a href="{% url 'open-book' book.id %}"> подробнее...
-                        <form action="{% url 'delete-book' book.id %}">
-                            <button class="delete_button">Удалить</button>
-                        </form>
-                    </a>    
-                    </h4>
-                    
-                    <p></p>
+            <div class="todo_container">    
+                {% for book in book_list %}        
+                <div class="todo_item
+                    {% if book.is_favorite %}
+                        marked
+                    {% endif %}
+                
+                ">
+                    <div class="todo_item_header">
+                        
+                        <h4>{{ book.author }}  -  {{ book.title }}   стоимость {{ book.price }}  </h4>
+                        
+                    </div>
+                    <div class="todo_item_footer">
+                        <p>{{ book.year }}</p>
+                        <div class="action_buttons">
+                            {% if book.is_favorite %}
+                            <a href="{% url 'unmark-book' book.id %}"><img src="{% static './icons/star_on.png' %}"/></a>
+                            {% else %}
+                            <a href="{% url 'mark-book' book.id %}"><img src="{% static './icons/star_off.png' %}"/></a>
+                            {% endif %}                        
+                            <a href="{% url 'delete-book' book.id %}"><img src="{% static './icons/vedro.png' %}"/> </a>
+                        </div>
+                       
+                    </div>    
+                    <a href="{% url 'open-book' book.id %}"> подробнее о книге...
                 </div>
-                <div class="book_item_footer">
-                </div>    
+                {% endfor %}
             </div>
-            {% endfor %}
+
+
+
 <script src="./script.js"></script>
 </body>
 </html>
